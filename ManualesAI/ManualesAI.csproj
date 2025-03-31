@@ -1,0 +1,65 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Python\buscar_manual.py" />
+    <None Remove="Python\buscar_manual_stream.py" />
+    <None Remove="Python\chroma_init.py" />
+    <None Remove="Python\cliente.py" />
+    <None Remove="Python\import_torch.py" />
+    <None Remove="Python\procesar_manual.py" />
+    <None Remove="Python\servidor.py" />
+    <None Remove="Python\__pycache__\buscar_manual.cpython-313.pyc" />
+    <None Remove="Python\__pycache__\custom_ollama_embedding.cpython-313.pyc" />
+    <None Remove="Python\__pycache__\servidor.cpython-313.pyc" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Python\buscar_manual.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Python\buscar_manual_stream.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Python\chroma_init.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Python\cliente.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Python\import_ntkl.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Python\import_torch.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Python\procesar_manual.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Python\servidor.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Python\uvicorn_init.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Python\__pycache__\buscar_manual.cpython-313.pyc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Python\__pycache__\custom_ollama_embedding.cpython-313.pyc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Python\__pycache__\servidor.cpython-313.pyc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Python\db\" />
+  </ItemGroup>
+
+</Project>

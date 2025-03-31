@@ -1,0 +1,2 @@
+usuario: .\nbkadm
+pass: Arsa2020

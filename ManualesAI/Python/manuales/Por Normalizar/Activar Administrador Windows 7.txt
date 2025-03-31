@@ -1,0 +1,4 @@
+Inicio/Escribir CMD/ Botón derecho, Ejecutar como administrador:
+
+net user administrador active/yes
+"El comando se ha realizado correctamente"

@@ -1,0 +1,83 @@
+﻿@page
+@model ManualesAI.Pages.ConsultaModel
+@{
+    ViewData["Title"] = "Consulta de Manuales";
+}
+
+<h2>Asistente Técnico AI</h2>
+
+<!-- Formulario para enviar la consulta -->
+<form id="consultaForm">
+    <label>Ingrese su pregunta:</label>
+    <input type="text" id="consultaTexto" class="form-control" required />
+    <button type="submit" class="btn btn-primary mt-2">Buscar</button>
+</form>
+
+<!-- Indicador de carga: Spinner de Bootstrap -->
+<div id="loadingSpinner" class="spinner-border text-primary" role="status" style="display: none; margin-top: 10px;">
+    <span class="visually-hidden">Buscando...</span>
+</div>
+<p id="loadingMessage" style="display: none; margin-top: 5px;">Buscando...</p>
+
+<h4 class="mt-3">Respuesta:</h4>
+<div id="respuesta" style="white-space: pre-wrap; border: 1px solid #ddd; padding: 10px; min-height: 50px;"></div>
+
+@section Scripts {
+        <script>
+            document.getElementById("consultaForm").addEventListener("submit", async function(e) {
+                e.preventDefault();  // Prevenir el envío normal del formulario
+
+                const respuestaDiv = document.getElementById("respuesta");
+                respuestaDiv.textContent = "";  // Limpiar respuesta previa
+
+                // Mostrar el spinner y el mensaje de "Buscando..."
+                const spinner = document.getElementById("loadingSpinner");
+                const loadingMessage = document.getElementById("loadingMessage");
+                spinner.style.display = "block";
+                loadingMessage.style.display = "block";
+
+                const consultaTexto = document.getElementById("consultaTexto").value;
+                const url = `http://181.44.13.150:8000/buscar/?pregunta=${encodeURIComponent(consultaTexto)}`;
+
+                try {
+                    const response = await fetch(url);
+                    if (!response.ok) {
+                        respuestaDiv.textContent = "Error en la consulta.";
+                        spinner.style.display = "none";
+                        loadingMessage.style.display = "none";
+                        return;
+                    }
+
+                    const reader = response.body.getReader();
+                    const decoder = new TextDecoder();
+                    let done = false;
+                    while (!done) {
+                        const { value, done: doneReading } = await reader.read();
+                        done = doneReading;
+                        if (value) {
+                            const chunk = decoder.decode(value, { stream: true });
+                            const lines = chunk.split("\n");
+                            for (const line of lines) {
+                                if (line.trim().length > 0) {
+                                    try {
+                                        const data = JSON.parse(line);
+                                        if (data && typeof data.respuesta === 'string') {
+                                            respuestaDiv.textContent += data.respuesta;
+                                        }
+                                    } catch (error) {
+                                        console.error("Error al parsear la línea:", line, error);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                } catch (error) {
+                    respuestaDiv.textContent = "Error: " + error;
+                }
+
+                // Ocultar el spinner y el mensaje al finalizar la consulta
+                spinner.style.display = "none";
+                loadingMessage.style.display = "none";
+            });
+        </script>
+}

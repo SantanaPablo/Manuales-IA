@@ -1,0 +1,20 @@
+[titulo=Conﬁguración de Aplicaciones y Datos de Usuario]
+[informacion=
+AppData: Datos Ocultos del Usuario
+Cada usuario tiene su carpeta AppData donde se guardan sus datos de las aplicaciones.
+Ruta Directa:
+Escribe en la barra del Explorador o en Ejecutar (Win + R):
+%appdata%
+Esto abre la carpeta AppData\Roaming.
+Escribir ruta en explorador de windows:
+Ir a la ruta C:\Users\(legajo)
+Escribir \appdata después del legajo o nombre de usuario
+ 
+Casos de Uso:
+Chrome:
+Marcadores de Google Chrome: AppData\Local\Google\Chrome\User Data\Default\Bookmarks.
+
+Lotus Notes:
+Conﬁguración: Copiar la carpeta
+AppData\Local\Lotus\Notes\Data para migrar perﬁles.]
+

@@ -1,0 +1,32 @@
+-Desembalar todas las maquinas y montarla en una posicion
+-Rotularlas con datos del usuario con archivo '' contraseñas y domicilios'' hasta la columna ''ZONA''
+-Ingresar con usuario y pass al equipo, las mismas se encuentran dentro del archivo '' contraseñas y domicilios'', en caso que no ingrese avisarme y pedimos el reset de la pass.
+-Instalar ANY CONNECT con la version de dos modulos.
+
+https://drive.google.com/drive/folders/1b3QspbMTezbxcvG75yLxYzMhsOfYArR5?usp=sharing
+
+-Instalar version 0.4.9 de Interact 64bits
+
+https://drive.google.com/file/d/1bkT58qD_yaPmYfP8ajmr2Dz-Cz3VfYJs/view?usp=sharing
+
+-Habilitar audio en caso que corresponda (fijarse si no aparece una X en el icono del parlante al lado de la fecha)
+-Desactivar IPV6 en red VPN y red local
+-Actualizar AV con update group policy y si permite con liveupdate
+-En las preferences de cisco any connect distiladar la opcion block untrasted serves en vpn y system scan
+-Verificar que el proxy este desactivado. (Solo tildar "Detectar proxy automaticamente").
+
+-Instalar TEAMVIEWER portable y dejar acceso directo en el escritorio.
+
+https://drive.google.com/file/d/1QknEuq5Db4rJOGGCFFr7IfhlnsOsuEf6/view?usp=sharing
+
+
+
+Reiniciar
+
+verificar que este funcionando todo correctamente (excepto VPN que no se puede probar)
+
+Desconectar cable de red, Reiniciar nuevamente e iniciar sesion sin red para verificar que ingrese por cache.
+
+Apagar 
+
+Llenar planilla ''Distribucion de equipamiento para operadores CC'' con N° de Serie, Modelo de Monitor y PC.

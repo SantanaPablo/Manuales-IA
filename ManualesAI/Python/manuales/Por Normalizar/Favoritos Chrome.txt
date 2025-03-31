@@ -1,0 +1,7 @@
+los favorito de chrome se guardan en win10 
+
+C:\Users\usuario\AppData\Local\Google\Chrome\User Data\Default
+
+copiar archivo 
+Bookmarks
+
