@@ -1,9 +1,0 @@
-[titulo= IBM lotus notes]
-[informacion= Conﬁgurar Lotus Notes
-Archivo ID:
-Solicita el archivo ID del usuario, se lo envian por mail.
-Contraseña:
-Al iniciar Lotus Notes, ingresa el servidor: dominoapps2/arsa.
-Error común: Si falla la autenticación, veriﬁca que el archivo ID esté
-actualizado, por lo general es el último que enviaron al mail, de lo contrario hay que pedir uno nuevo.
-Si da error de servidor, abrir cmd y hacer ping al servicio dominoapps2]

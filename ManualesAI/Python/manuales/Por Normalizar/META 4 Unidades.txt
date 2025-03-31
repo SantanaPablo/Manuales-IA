@@ -1,2 +1,0 @@
-M:  \\bases-meta4\desa
-N:  \\shares-meta4\M4PROD\Meta4\FSemind117
