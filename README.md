@@ -1,8 +1,3 @@
-
----
-
-### **3️⃣ Manuales-IA** (Python + FastAPI + ChromaDB + Ollama)
-```markdown
 # Manuales-IA
 
 Sistema que entrena un modelo de IA con manuales y permite realizar consultas inteligentes.
